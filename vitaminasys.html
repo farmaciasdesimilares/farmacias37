@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/encabezado.css">
+    <link rel="stylesheet" href="">
+    <link rel="shortcut icon" href="imagenes/logo.png" />
+    <script src="https://kit.fontawesome.com/90b922c21d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="tienda/style-tienda.css">
+    <script src="tienda/app.js" async></script>
+    <title>Farmacias Similares | Vitaminas y Suplementos </title>
+</head>
+
+<body>
+    <div align="center">
+        <div class="banner">
+            <a href="index.html"><img src="imagenes/logo2.jpg" alt="Farmacias similares Banner"></a>
+        </div>
+        <header>
+            <nav>
+                <a href="inicio.html" class="testohead">Inicio</a>
+                <a href="medicamentos.html" class="testohead">Medicamentos</a>
+                <a href="vitaminasys.html" class="testohead">Vitaminas y Suplementos</a>
+                <a href="saludsexual.html" class="testohead">Salud Sexual</a>
+                <a href="formulario.html" class="testohead">Contacto</a>
+            </nav>
+
+            <div class="search-box">
+                <input type="text" placeholder="">
+            </div>
+
+            <div class="user">
+                <img src="imagenes/usuario.png" alt="usuario">
+            </div>
+        </header>
+    </div>
+    <script type="text/javascript">
+        window.addEventListener("scroll", function () {
+            var header = document.querySelector("header");
+            header.classList.toggle("abajo", window.scrollY > 0);
+            var elementos = document.getElementsByClassName("testohead");
+
+            for (var i = 0; i < elementos.length; i++) {
+                // Restaurar el color original si el desplazamiento es cero
+                if (window.scrollY === 0) {
+                    elementos[i].style.color = ""; // Esto restaura el color original definido en la hoja de estilo o en línea
+                } else {
+                    elementos[i].style.color = "white";
+                }
+            }
+        });
+
+    </script>
+    <br><br><br>
+    <section class="contenedor">
+        <!-- Contenedor de elementos -->
+        <div class="contenedor-items">
+            <div class="item">
+                <span class="titulo-item">5- HIDROXITRIPTOFANO + VITAMINA B6</span>
+                <img src="images/vitaminas/HIDROXITRIPTOFANO.jpg" alt="" class="img-item">
+                <span class="precio-item">$129.00</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">ACEITE DE HIGADO DE BACALAO EPA</span>
+                <img src="images/vitaminas/Aceite.jpg" alt="" class="img-item">
+                <span class="precio-item">$55.00</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">ACIDO ASCORBICO</span>
+                <img src="images/vitaminas/ACIDO ASCORBICO.jpg" alt="" class="img-item">
+                <span class="precio-item">$149.00</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">ACIDO GLUTAMICO</span>
+                <img src="images/vitaminas/ACIDO GLUTAMICO.jpg" alt="" class="img-item">
+                <span class="precio-item">$98.00</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">ACIDO LINOLEICO CLA XGEAR</span>
+                <img src="images/vitaminas/ACIDO LINOLEICO.jpg" alt="" class="img-item">
+                <span class="precio-item">$328.01</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">AJO DEODORIZADO DEL DR SIMI</span>
+                <img src="images/vitaminas/AJO DEODORIZADO.jpg" alt="" class="img-item">
+                <span class="precio-item">$59.00</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">BETAGLUCANOS</span>
+                <img src="images/vitaminas/BETAGLUCANOS.jpg" alt="" class="img-item">
+                <span class="precio-item">$79.00</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">CARAMELOS DR SIMI SABOR MIEL DE ABEJA</span>
+                <img src="images/vitaminas/Caramelos.jpg" alt="" class="img-item">
+                <span class="precio-item">$20.00</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">COLAGENO HIDROLIZADO</span>
+                <img src="images/vitaminas/COLAGENO HIDROLIZADO.jpg" alt="" class="img-item">
+                <span class="precio-item">$259.00</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">CURCUMA</span>
+                <img src="images/vitaminas/CURCUMA.jpg" alt="" class="img-item">
+                <span class="precio-item">$149.00</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">EXTRACTO DE HOJA DE GUAYABA</span>
+                <img src="images/vitaminas/Extracto.jpg" alt="" class="img-item">
+                <span class="precio-item">$169.00</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">FIBRA DE ACACIA</span>
+                <img src="images/vitaminas/FIBRA DE ACACIA.jpg" alt="" class="img-item">
+                <span class="precio-item">$209.00</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">FORZE VF G+G</span>
+                <img src="images/vitaminas/FORZE.jpg" alt="" class="img-item">
+                <span class="precio-item">$104.00</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">GELASIMI CISTEINA</span>
+                <img src="images/vitaminas/GELASIMI CISTEINA.jpg" alt="" class="img-item">
+                <span class="precio-item">$66.00</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">GLUCOSAMINA</span>
+                <img src="images/vitaminas/GLUCOSAMINA.jpg" alt="" class="img-item">
+                <span class="precio-item">$159.00</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">GOMITAS CBD FRUTOS ROJOS</span>
+                <img src="images/vitaminas/GOMITAS CBD FRUTOS ROJOS.jpg" alt="" class="img-item">
+                <span class="precio-item">$309.00</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">GOMITAS CON COLAGENO HIDROLIZADO</span>
+                <img src="images/vitaminas/GOMITAS CON COLAGENO HIDROLIZADO.jpg" alt="" class="img-item">
+                <span class="precio-item">$149.00</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">GOMITAS LACTOBACILLUS SPOROG</span>
+                <img src="images/vitaminas/GOMITAS LACTOBACILLUS SPOROG.jpg" alt="" class="img-item">
+                <span class="precio-item">$149.00</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">ISOFLAVONAS SOYA DR SIMI</span>
+                <img src="images/vitaminas/ISOFLAVONAS SOYA DR SIMI.jpg" alt="" class="img-item">
+                <span class="precio-item">$62.00</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item">
+                <span class="titulo-item">POLVO SIMIRICO SABOR CHOCOLATE</span>
+                <img src="images/vitaminas/polvo.jpg" alt="" class="img-item">
+                <span class="precio-item">$169.00</span>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+        </div>
+        <!-- Carrito de Compras -->
+        <div class="carrito" id="carrito">
+            <div class="header-carrito">
+                <h2>Tu Carrito</h2>
+            </div>
+
+            <div class="carrito-items">
+            </div>
+            <div class="carrito-total">
+                <div class="fila">
+                    <strong>Tu Total</strong>
+                    <span class="carrito-precio-total">
+                        $120.000,00
+                    </span>
+                </div>
+                <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="pie-pagina">
+        <div class="grupo1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="imagenes/logo.png" alt="D María">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>SOBRE NOSOTROS</h2>
+                <P>Nuestra misión es ser más que una farmacia, queremos ser un recurso de salud confiable y
+                    accesible para nuestra comunidad.</P>
+            </div>
+            <div class="box">
+                <h2>SÍGUENOS</h2>
+                <div class="red-social">
+                    <a href="https://es-la.facebook.com/farmaciassimilares/" class="fa fa-facebook"></a>
+                    <a href="https://twitter.com/fsimilares/status/1589319121770254337"
+                        class="fa-brands fa-x-twitter"></a>
+                    <a href="https://www.instagram.com/fsimilares/" class="fa fa-instagram"></a>
+                    <a href="https://www.tiktok.com/@drsimi_oficial" class="fa-brands fa-tiktok"></a>
+                    <a href="https://apps.apple.com/mx/app/farmacias-similares/id949664461"
+                        class="fa-brands fa-app-store"></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.ironbit.farmacias&hl=es_MX&pli=1"
+                        class="fa-brands fa-google-play"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo2">
+            <small>&copy; 2023 <b>Farmacias Similares</b> - Todos los Derechos Reservados.</small>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/encabezado.css">
+    <link rel="stylesheet" href="css/cuerpo.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="shortcut icon" href="images/logo4.png" />
+    <script src="https://kit.fontawesome.com/90b922c21d.js" crossorigin="anonymous"></script>
+    <title>Farmacias 37 | Inicio</title>
+</head>
+
+<body>
+
+    <div align="center">
+        <div class="banner">
+            <a href="index.html"><img src="images/logo3.png" alt="Farmacias similares Banner"></a>
+        </div>
+        <header>
+            <nav>
+                <a href="inicio.html" class="testohead">Inicio</a>
+                <a href="medicamentos.html" class="testohead">Medicamentos</a>
+                <a href="vitaminasys.html" class="testohead">Vitaminas y Suplementos</a>
+                <a href="saludsexual.html" class="testohead">Salud Sexual</a>
+                <a href="formulario.html" class="testohead">Contacto</a>
+            </nav>
+
+            <div class="search-box">
+                <input type="text" placeholder="">
+            </div>
+
+            <div class="user">
+                <img src="images/usuario.png" alt="usuario">
+            </div>
+        </header>
+    </div>
+
+    <script type="text/javascript">
+        window.addEventListener("scroll", function () {
+            var header = document.querySelector("header");
+            header.classList.toggle("abajo", window.scrollY > 0);
+            var elementos = document.getElementsByClassName("testohead");
+
+            for (var i = 0; i < elementos.length; i++) {
+                // Restaurar el color original si el desplazamiento es cero
+                if (window.scrollY === 0) {
+                    elementos[i].style.color = ""; // Esto restaura el color original definido en la hoja de estilo o en línea
+                } else {
+                    elementos[i].style.color = "white";
+                }
+            }
+        });
+
+    </script>
+
+    <br><br><br>
+    <h1 class="h1" align="center">¡Ofertas Especiales!</h1>
+    <div align="center">
+        <div class="slider">
+            <ul>
+                <li>
+                    <img src="images/slide 4.jpg" alt="">
+                </li>
+                <li>
+                    <img src="images/slide1.jpg" alt="">
+                </li>
+                <li>
+                    <img src="images/slide2.png" alt="">
+                </li>
+                <li>
+                    <img src="images/analgesia-slide.jpg" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <h1 class="h1" align="center">Bienvenidos a Nuestra Farmacia</h1>
+    <div class="asd">
+        <p>Somos un equipo comprometido con tu salud y bienestar. En nuestra farmacia, nos esforzamos por ofrecer
+            productos
+            y servicios de la más alta calidad para satisfacer tus necesidades de salud.</p>
+
+        <p>Nuestra labor consiste en proporcionar asesoramiento profesional, dispensar medicamentos con precisión y
+            brindar
+            atención personalizada. Estamos aquí para responder a tus preguntas y ayudarte a tomar decisiones informadas
+            sobre tu salud.</p>
+
+        <p>En Nuestra Farmacia, valoramos la confianza que depositas en nosotros. Trabajamos incansablemente para
+            asegurarnos de que recibas la atención que mereces y los productos que necesitas para mantener un estilo de
+            vida
+            saludable.</p>
+    </div><br><br><br>
+
+    <div align="center">
+        <div class="receta" style="display: flex;">
+            <div class="letras">
+                <h1 class="h1">Dolores musculares</h1>
+                <p>La actividad física se puede realizar prácticamente en cualquier sitio y en
+                    algunos casos no requiere equipo necesariamente. Para mejorar y mantener su
+                    salud bastan 30 minutos de actividad física de intensidad moderada 5 días por
+                    semana, ya sea que practiques algún deporte, caminata, natación o andar en bicicleta
+                    por mencionar algunos ejemplos.</p>
+            </div>
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/m_R9KKtYtWU?si=nQl681z3FDRGFuRw"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div><br><br><br><br><br><br>
+
+    <h1 class="h1" align="center">¡Visita nuestras sucursales!</h1>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([27.55038165791216, -109.92487255720403], 12);
+
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        var myIcon = L.icon({
+            iconUrl: 'images/marcador2.png',
+            iconSize: [48, 48],
+            iconAnchor: [22, 44],
+            popupAnchor: [-3, -76],
+        });
+
+        //Sureste
+        var se1 = L.marker([27.447103192173103, -109.92380019528544], { icon: myIcon }).addTo(map);
+        se1.bindPopup("<b>P.º Miravalle Sur 1502, Fontana, 85096 Cdad. Obregón, Son.</b>").openPopup();
+        var se2 = L.marker([27.452282583375318, -109.92877837479973], { icon: myIcon }).addTo(map);
+        se2.bindPopup("<b>C. Jalisco 7312, Haciendas del Sol, 85097 Cdad. Obregón, Son.</b>").openPopup();
+        var se3 = L.marker([27.455633824547615, -109.91418715898199], { icon: myIcon }).addTo(map);
+        se3.bindPopup("<b>Misión del Real, 85098 Cdad. Obregón, Son.</b>").openPopup();
+        var se4 = L.marker([27.463097586576676, -109.92483016346083], { icon: myIcon }).addTo(map);
+        se4.bindPopup("<b>P.º Miravalle Sur 5, Primero de Mayo, 85098 Cdad. Obregón, Son.</b>").openPopup();
+        var se5 = L.marker([27.46858084484787, -109.9298083429751], { icon: myIcon }).addTo(map);
+        se5.bindPopup("<b>Las Campanas, 85080 Cdad. Obregón, Son.</b>").openPopup();
+        var se6 = L.marker([27.479089660684288, -109.92774840662436], { icon: myIcon }).addTo(map);
+        se6.bindPopup("<b>Plaza Obregón, C. Jalisco 4, Municipio Libre, 85080 Cdad. Obregón, Son.</b>").openPopup();
+
+
+        //Suroeste
+        var so1 = L.marker([27.44271358149462, -109.94233312422887], { icon: myIcon }).addTo(map);
+        so1.bindPopup("<b>P.º de las Palmas 207, Maximiliano R. López, 85195 Cdad. Obregón, Son.</b>").openPopup();
+        var so2 = L.marker([27.447038746472156, -109.93949890299344], { icon: myIcon }).addTo(map);
+        so2.bindPopup("<b>C. Manuel de Jesús Clouthier 108, Valle del Sol, Sonora, 85198 Cdad. Obregón, Son.</b>").openPopup();
+        var so3 = L.marker([27.45000931114095, -109.94181633138798], { icon: myIcon }).addTo(map);
+        so3.bindPopup("<b>Calle Blvd. C.T.M., Sonora, 85198 Cdad. Obregón, Son.</b>").openPopup();
+        var so4 = L.marker([27.461652772396626, -109.93925214098735], { icon: myIcon }).addTo(map);
+        so4.bindPopup("<b>C. Coahuila 4603-1694 F, México, 85190 Cdad. Obregón, Son.</b>").openPopup();
+        var so5 = L.marker([27.464470629161845, -109.9538433573232], { icon: myIcon }).addTo(map);
+        so5.bindPopup("<b>C. Michoacán 4202, Robles del Castillo, 85199 Cdad. Obregón, Son.</b>").openPopup();
+        var so6 = L.marker([27.4662983894598, -109.94534611987639], { icon: myIcon }).addTo(map);
+        so6.bindPopup("<b>C. 300 3705, Cortinas 3 Secc, 85180 Cdad. Obregón, Son.</b>").openPopup();
+        var so7 = L.marker([27.47132457399795, -109.95719075389313], { icon: myIcon }).addTo(map);
+        so7.bindPopup("<b>C. Río Moctezuma 732, Libertad, 85150 Cdad. Obregón, Son.</b>").openPopup();
+
+
+        //Noreste
+        var ne1 = L.marker([27.488153007919934, -109.90935623954482], { icon: myIcon }).addTo(map);
+        ne1.bindPopup("<b>Calle Blvd. Bartolomé Delgado de León 512 B, Campanario, 85064 Cdad. Obregón, Son.</b>").openPopup();
+        var ne2 = L.marker([27.492797507587834, -109.92274582659456], { icon: myIcon }).addTo(map);
+        ne2.bindPopup("<b>C. No Reelección 1432 OTE, Benito Juárez, 85060 Cdad. Obregón, Son.</b>").openPopup();
+        var ne3 = L.marker([27.512210917028494, -109.9256640692615], { icon: myIcon }).addTo(map);
+        ne3.bindPopup("<b>CLL. Ignacio Ruiz OTE 1401, Nuevo Cajeme, 85050 Cdad. Obregón, Son.</b>").openPopup();
+        var ne4 = L.marker([27.513505022530882, -109.91596520227678], { icon: myIcon }).addTo(map);
+        ne4.bindPopup("<b>C. Rosendo Montiel 2019-N/A, Cajeme, 85050 Cdad. Obregón, Son.</b>").openPopup();
+
+        //Noroeste
+        var no1 = L.marker([27.493102058088503, -109.93029892654728], { icon: myIcon }).addTo(map);
+        no1.bindPopup("<b>Av. Miguel Alemán 271, Centro, 85000 Cdad. Obregón, Son.</b>").openPopup();
+        var no2 = L.marker([27.490774466489285, -109.93290637247526], { icon: myIcon }).addTo(map);
+        no2.bindPopup("<b>Av Ignacio Zaragoza 728, Centro, Urb. No. 1, 85000 Cdad. Obregón, Son.</b>").openPopup();
+        var no3 = L.marker([27.48468316766163, -109.93702624517674], { icon: myIcon }).addTo(map);
+        no3.bindPopup("<b>Blvd. Rodolfo Elías Calles 333, Centro, Urb. No. 1, 85000 Cdad. Obregón, Son.</b>").openPopup();
+        var no4 = L.marker([27.5008243728511, -109.94543765194224], { icon: myIcon }).addTo(map);
+        no4.bindPopup("<b>C. California 238 Norte, Centro, 85000 Cdad. Obregón, Son.</b>").openPopup();
+        var no5 = L.marker([27.511482361737997, -109.94801257238068], { icon: myIcon }).addTo(map);
+        no5.bindPopup("<b>C. Quintana Roo 780-Norte, Noroeste, 85100 Cdad. Obregón, Son.</b>").openPopup();
+        var no6 = L.marker([27.503108314580945, -109.95625231893496], { icon: myIcon }).addTo(map);
+        no6.bindPopup("<b>Av. José María Morelos 1635, Urb. No. 6, 85110 Cdad. Obregón, Son.</b>").openPopup();
+        var no7 = L.marker([27.484378593941138, -109.96105883708668], { icon: myIcon }).addTo(map);
+        no7.bindPopup("<b>Blvd. Rodolfo Elías Calles 1793, La Florida, 85150 Cdad. Obregón, Son.</b>").openPopup();
+        var no8 = L.marker([27.497169967852532, -109.96432040655884], { icon: myIcon }).addTo(map);
+        no8.bindPopup("<b>Calle Vicente Guerrero 2227, Bellavista, 85130 Cdad. Obregón, Son.</b>").openPopup();
+        var no9 = L.marker([27.485596884213983, -109.97359012013716], { icon: myIcon }).addTo(map);
+        no9.bindPopup("<b>Blvd. Rodolfo Elías Calles 2542, Col del Lago, 85138 Cdad. Obregón, Son.</b>").openPopup();
+        var no10 = L.marker([27.511190578122065, -109.98672827332035], { icon: myIcon }).addTo(map);
+        no10.bindPopup("<b>Providencia, 85203 Providencia, Son.</b>").openPopup();
+
+    </script><br><br><br>
+
+    <footer class="pie-pagina">
+        <div class="grupo1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="images/logo4.png" alt="D María">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>SOBRE NOSOTROS</h2>
+                <P>Nuestra misión es ser más que una farmacia, queremos ser un recurso de salud confiable y
+                    accesible para nuestra comunidad.</P>
+            </div>
+            <div class="box">
+                <h2>SÍGUENOS</h2>
+                <div class="red-social">
+                    <a href="https://es-la.facebook.com/farmaciassimilares/" class="fa fa-facebook"></a>
+                    <a href="https://twitter.com/fsimilares/status/1589319121770254337"
+                        class="fa-brands fa-x-twitter"></a>
+                    <a href="https://www.instagram.com/fsimilares/" class="fa fa-instagram"></a>
+                    <a href="https://www.tiktok.com/@drsimi_oficial" class="fa-brands fa-tiktok"></a>
+                    <a href="https://apps.apple.com/mx/app/farmacias-similares/id949664461"
+                        class="fa-brands fa-app-store"></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.ironbit.farmacias&hl=es_MX&pli=1"
+                        class="fa-brands fa-google-play"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo2">
+            <small>&copy; 2023 <b>Farmacias Similares</b> - Todos los Derechos Reservados.</small>
+        </div>
+    </footer>
+</body>
+
+</html>
